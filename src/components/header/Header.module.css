@@ -1,0 +1,139 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  color: #b92b27;
+  text-decoration: none;
+}
+
+.iconContainer {
+  display: flex; /* flex-wrap: no-wrap(기본값) 이용해 다음 줄로 안 내려가게 하기 위해 */
+}
+
+.icons {
+  fill: #636466;
+  padding: 0.5rem 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icons:hover {
+  background-color: #F1F2F2;
+  fill: #a6a8aa;
+}
+
+.icons.clicked {
+  fill: #b92b27;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search:hover,
+.search:focus {
+  border-color: #2E69FF;
+}
+
+.searchIcon {
+  fill: transparent;
+}
+
+.searchBar {
+  border: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 6rem;
+}
+
+.searchBar:focus {
+  outline: none;
+}
+
+.quoraPlusBtn {
+  border: 1px solid #DAD2D4;
+  border-radius: 20px;
+  padding: 0.5rem 0.75rem;
+  background-color: rgb(244, 244, 244);
+  color: #838385;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 4rem;
+}
+
+.quoraPlusBtn:hover,
+.quoraPlusBtn:focus {
+  background-color: #ECECEE;
+}
+
+.userProfile {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.userProfile img {
+  border-radius: 50%;
+  width: 2rem;
+}
+
+.langBtn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.langIcon {
+  width: 2rem;
+  height: 2.2rem;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+}
+
+.addQBtn {
+  background-color: #b92b27;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  white-space: nowrap;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-right: 1px solid rgb(164, 38, 35);
+}
+
+.arrowBtn {
+  background-color: #b92b27;
+  border: none;
+  /* padding: 0.12rem 0.3rem; */
+  padding: 0;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.arrowIcon {
+  fill: transparent;
+  color: white;
+  padding: 0.125rem 0.3rem;
+}
