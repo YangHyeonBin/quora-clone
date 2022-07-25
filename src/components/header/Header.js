@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { ReactComponent as HomeIcon} from '../../assets/home.svg';
-import { ReactComponent as FollowingIcon} from '../../assets/following.svg';
-import { ReactComponent as AnswerIcon} from '../../assets/answer.svg';
-import { ReactComponent as SpacesIcon} from '../../assets/spaces.svg';
-import { ReactComponent as NotificationsIcon} from '../../assets/notifications.svg';
-import { ReactComponent as SearchIcon } from '../../assets/search.svg';
-import { ReactComponent as LangIcon } from '../../assets/language.svg';
-import { ReactComponent as DownArrow } from '../../assets/down-arrow.svg';
+import { ReactComponent as HomeIcon} from '../../assets/header/home.svg';
+import { ReactComponent as FollowingIcon} from '../../assets/header/following.svg';
+import { ReactComponent as AnswerIcon} from '../../assets/header/answer.svg';
+import { ReactComponent as SpacesIcon} from '../../assets/header/spaces.svg';
+import { ReactComponent as NotificationsIcon} from '../../assets/header/notifications.svg';
+import { ReactComponent as SearchIcon } from '../../assets/header/search.svg';
+import { ReactComponent as LangIcon } from '../../assets/header/language.svg';
+import { ReactComponent as DownArrow } from '../../assets/header/down-arrow.svg';
 
 import styles from './Header.module.css';
 

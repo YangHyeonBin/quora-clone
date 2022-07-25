@@ -2,12 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1px;
+  padding: 0.5rem;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 999;
   box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.5);
+  background-color: white;
 }
 
 .logo {
@@ -17,18 +18,34 @@
 
 .iconContainer {
   display: flex; /* flex-wrap: no-wrap(기본값) 이용해 다음 줄로 안 내려가게 하기 위해 */
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 1rem;
+  /* width: 10rem; */
+}
+
+.iconContainer a {
+  padding: 0.5rem 1rem;
 }
 
 .icons {
   fill: #636466;
-  padding: 0.5rem 1rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  /* width: 1.5rem;
+  height: 1.5rem; */
+  width: 24px;
+  height: 24px;
+}
+
+.iconContainer a:hover {
+  background-color: #F1F2F2;
+  border-radius: 12px;
 }
 
 .icons:hover {
-  background-color: #F1F2F2;
   fill: #a6a8aa;
+  /* transform: scale(1.1); 아이콘 살짝 커짐 */
 }
 
 .icons.clicked {
@@ -38,6 +55,9 @@
 .search {
   display: flex;
   align-items: center;
+  width: 20rem;
+  min-width: 6rem;
+  margin-right: 1.5rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -50,13 +70,13 @@
 
 .searchIcon {
   fill: transparent;
+  overflow: visible;
 }
 
 .searchBar {
   border: none;
   text-overflow: ellipsis;
   overflow: hidden;
-  min-width: 6rem;
 }
 
 .searchBar:focus {
@@ -66,6 +86,7 @@
 .quoraPlusBtn {
   border: 1px solid #DAD2D4;
   border-radius: 20px;
+  margin-right: 1.5rem;
   padding: 0.5rem 0.75rem;
   background-color: rgb(244, 244, 244);
   color: #838385;
@@ -82,10 +103,16 @@
 }
 
 .userProfile {
+  padding: 0.5rem;
   border: none;
-  padding: 0;
+  margin-right: 1rem;
   background-color: transparent;
   cursor: pointer;
+}
+
+.userProfile:hover {
+  background-color: #F1F2F2;
+  border-radius: 4px;
 }
 
 .userProfile img {
@@ -95,9 +122,16 @@
 
 .langBtn {
   border: none;
-  padding: 0;
+  margin-right: 1.5rem;
+  padding: 0.5rem;
   background-color: transparent;
   cursor: pointer;
+}
+
+.langBtn:hover {
+  background-color: #F1F2F2;
+  fill: #a6a8aa;
+  border-radius: 4px;
 }
 
 .langIcon {
@@ -119,21 +153,22 @@
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
   border-right: 1px solid rgb(164, 38, 35);
+  cursor: pointer;
 }
 
 .arrowBtn {
   background-color: #b92b27;
   border: none;
-  /* padding: 0.12rem 0.3rem; */
-  padding: 0;
+  padding: 0.25rem 0.6rem;
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .arrowIcon {
   fill: transparent;
-  color: white;
-  padding: 0.125rem 0.3rem;
+  stroke: white;
+  /* padding: 0.125rem 0.3rem; */
 }
