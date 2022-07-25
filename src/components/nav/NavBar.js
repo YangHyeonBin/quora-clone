@@ -1,3 +1,5 @@
+import ListItem from './ListItem';
+
 import { ReactComponent as PlusIcon } from '../../assets/nav/plus.svg';
 import { ReactComponent as DiscoverIcon } from '../../assets/nav/discover.svg';
 import styles from './NavBar.module.css';
@@ -7,7 +9,7 @@ const NavBar = () => {
     <nav className={styles.nav}>
       <h1 className={styles['sr-only']}>Side navigation bar</h1>
       <div>
-        <button className={`${styles.spaceBtn} ${styles.gray}`}>
+        <button type='button' className={`${styles.spaceBtn} ${styles.gray}`}>
           <PlusIcon className={styles.spaceIcon} />
           Create Space
         </button>
@@ -15,228 +17,83 @@ const NavBar = () => {
           className={styles.container}
           aria-label="Choose the topic you want to see."
         >
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Business
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Cooking
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Music
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Food
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Economics
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Writing
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Design
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Fashion and Style
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Health
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Visiting and Travel
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Technology
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={styles.topic}
-            >
-              Books
-            </a>
-          </li>
+          <ListItem href="#" className={styles.topic}>
+            Business
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Cooking
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Music
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Food
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Economics
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Writing
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Design
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Fashion and Style
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Health
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Visiting and Travel
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Technology
+          </ListItem>
+          <ListItem href="#" className={styles.topic}>
+            Books
+          </ListItem>
         </ul>
-        <button className={styles.spaceBtn}>
+        <button type='button' className={styles.spaceBtn}>
           <DiscoverIcon className={styles.spaceIcon} />
           Discover Spaces
         </button>
       </div>
       <hr />
-      <ul
-        aria-label="Found more about Quora"
-        className={`${styles.container} ${styles.infos}`}
-      >
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+      <footer>
+        <ul
+          aria-label="Found more about Quora"
+          className={`${styles.container} ${styles.infos}`}
+        >
+          <ListItem href='#' className={styles.info}>
             About
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Careers
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Terms
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Privacy
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Acceptable
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Use
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Businesses
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Press
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer noopener"
-            className={styles.info}
-          >
+          </ListItem>
+          <ListItem href='#' className={styles.info}>
             Your Ad Choices
-          </a>
-        </li>
-      </ul>
+          </ListItem>
+        </ul>
+      </footer>
     </nav>
   );
 };

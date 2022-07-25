@@ -47,18 +47,18 @@ const Header = () => {
         <SearchIcon className={styles.searchIcon} />
         <input type='search' placeholder='Search Quora' className={styles.searchBar} />
       </form>
-      <button className={styles.quoraPlusBtn}>Try Quora+</button>
-      <button className={styles.userProfile}>
+      <button type='button' className={styles.quoraPlusBtn}>Try Quora+</button>
+      <button type='button' className={styles.userProfile}>
         <img src='https://qph.cf2.quoracdn.net/main-thumb-1619119033-50-vkgbjgcbnzfnlkggkwoltihgvxxjzvhv.jpeg' alt='User Profile Image' />
       </button>
-      <button className={styles.langBtn}>
+      <button type='button' className={styles.langBtn}>
         <LangIcon className={styles.langIcon} />
       </button>
       <div className={styles.btnContainer}>
-        <button className={styles.addQBtn}>
+        <button type='button' className={styles.addQBtn}>
           Add question
         </button>
-        <button className={styles.arrowBtn}>
+        <button type='button' className={styles.arrowBtn}>
           <DownArrow className={styles.arrowIcon}/>
         </button>
       </div>

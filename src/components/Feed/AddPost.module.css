@@ -1,0 +1,80 @@
+.section {
+  position: absolute;
+  top: 5rem;
+  left: 12rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.card {
+  padding: 0.5rem;
+}
+
+/* 위쪽, 통합 버튼 영역 */
+.integratedBtn {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  /* padding: 0.5rem; */
+  margin-bottom: 0.5rem;
+}
+
+.userProfile {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.ask-share-btn {
+  border: 1px solid #dee0e1;
+  border-radius: 20px;
+  color: #878686;
+  width: 100%;
+  padding: 0.4rem 5rem 0.4rem 1rem;
+  font-size: medium;
+}
+
+/* 아래쪽, 버튼 3개 영역 */
+.threeBtns {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.uploadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #636466;
+  font-size: small;
+  font-weight: 500;
+  padding: 0; /* button 기본 스타일로 들어가 있는 듯해 제거 */
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #636466;
+  font-size: small;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.answer::before,
+.answer::after {
+  content: '';
+  border-left: 2px solid #dee0e1;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+
+.icon {
+  margin-right: 0.3rem;
+}
