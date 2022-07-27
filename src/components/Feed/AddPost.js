@@ -10,7 +10,7 @@ const AddPost = () => {
     <section className={styles.section}>
       <Card className={styles.card}>
         <div className={styles.integratedBtn}>
-          <h1>
+          <h1 className={styles.heading}>
             <button className={styles['ask-share-btn']}>What do you want to ask or share?</button>
           </h1>
           <img src='https://qph.cf2.quoracdn.net/main-thumb-1619119033-50-vkgbjgcbnzfnlkggkwoltihgvxxjzvhv.jpeg' alt='User Profile Image' className={styles.userProfile} />
@@ -20,10 +20,12 @@ const AddPost = () => {
             <AskIcon className={styles.icon}/>
             Ask
           </button>
-          <a href='#' target='_blank' rel="noreferrer noopener" className={styles.answer}>
-            <AnswerIcon className={styles.icon} />
-            Answer
-          </a>
+          <span className={styles['answer-container']}>
+            <a href='#' target='_blank' rel="noreferrer noopener" className={styles.answer}>
+              <AnswerIcon className={styles.icon} />
+              Answer
+            </a>
+          </span>
           <button type='button' className={styles.uploadBtn}>
             <PostIcon className={styles.icon} />
             Post

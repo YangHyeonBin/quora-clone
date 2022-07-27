@@ -1,13 +1,13 @@
 import AddPost from './AddPost';
-import ViewPost from './ViewPost';
+import ViewPosts from './ViewPosts';
 
 import styles from './Feed.module.css';
 
 const Feed = () => {
   return (
-    <main>
+    <main className={styles['posts-container']}>
       <AddPost />
-      <ViewPost />
+      <ViewPosts />
     </main>
   )
 };

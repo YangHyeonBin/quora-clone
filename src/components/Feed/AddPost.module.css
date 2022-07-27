@@ -1,13 +1,14 @@
 .section {
-  position: absolute;
+  /* position: absolute;
   top: 5rem;
   left: 12rem;
   padding: 1rem;
-  width: 100%;
+  width: 37.5rem; */ /* ViewPosts와 함께 위치 차지하기 위해 Feed에서 둘을 담은 컨테이너에게 이 속성들을 줌 */
+  margin-bottom: 1rem;
 }
 
 .card {
-  padding: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
 }
 
 /* 위쪽, 통합 버튼 영역 */
@@ -28,19 +29,29 @@
   margin-right: 0.5rem;
 }
 
+.heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
 .ask-share-btn {
+  display: flex;
+  justify-content: flex-start;
   border: 1px solid #dee0e1;
   border-radius: 20px;
   color: #878686;
   width: 100%;
-  padding: 0.4rem 5rem 0.4rem 1rem;
+  padding: 0.2rem 0 0.2rem 0.75rem;
+  /* padding: 0.4rem 13rem 0.4rem 1rem; */
   font-size: medium;
+  cursor: pointer;
 }
 
 /* 아래쪽, 버튼 3개 영역 */
 .threeBtns {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .uploadBtn {
@@ -48,27 +59,43 @@
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 4px;
+  border-radius: 16px;
   background-color: transparent;
   cursor: pointer;
   color: #636466;
   font-size: small;
   font-weight: 500;
-  padding: 0; /* button 기본 스타일로 들어가 있는 듯해 제거 */
+  padding: 0.2rem 0.5rem;
+  width: 10.35rem;
+  flex: 1;
+}
+
+.answer-container {
+  display: flex;
+  align-items: center;
 }
 
 .answer {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #636466;
   font-size: small;
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 16px;
+  width: 10.35rem;
+  padding: 0.2rem 0.5rem;
+  flex: 1;
 }
 
-.answer::before,
-.answer::after {
+.answer:hover,
+.uploadBtn:hover {
+  background-color: #f1f2f3;
+}
+
+.answer-container::before,
+.answer-container::after {
   content: '';
   border-left: 2px solid #dee0e1;
   height: 1rem;

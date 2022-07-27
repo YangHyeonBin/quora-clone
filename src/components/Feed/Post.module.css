@@ -1,0 +1,57 @@
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.article {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userProfile {
+  border-radius: 10px;
+  width: 2.25rem;
+  height: 2.25rem;
+  /* height: 100%; */
+  /* margin-top: 4px; 부모 a 높이가 4px 더 커서 */
+  margin-right: 0.5rem;
+}
+
+.author {
+  font-size: small;
+  margin-bottom: 0.25rem;
+}
+
+.author-link {
+  text-decoration: none;
+  color: #282829;
+}
+
+.date {
+  color: #636466;
+  font-size: small;
+}
+
+.main {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
