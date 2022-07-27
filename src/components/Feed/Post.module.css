@@ -47,6 +47,10 @@
   color: #282829;
 }
 
+.author-link:hover {
+  text-decoration: underline;
+}
+
 .date {
   color: #636466;
   font-size: small;

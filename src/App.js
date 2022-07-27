@@ -5,9 +5,9 @@ import './App.css';
 
 function App() {
   return (
-    <Fragment>
+    <div className='App'>
       <Main />
-    </Fragment>
+    </div>
   );
 }
 

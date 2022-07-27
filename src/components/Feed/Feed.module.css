@@ -1,7 +1,7 @@
 .posts-container {
-  position: absolute;
+  /* position: absolute;
   top: 5rem;
-  left: 12rem;
+  left: 12rem; */
   padding: 1rem;
-  width: 37.5rem;
+  max-width: 37.5rem;
 }

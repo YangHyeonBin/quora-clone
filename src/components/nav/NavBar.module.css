@@ -21,11 +21,19 @@
 }
 
 .nav {
-  position: absolute; /* 기준점=헤더 */
-  top: 5rem;
+  /* position: absolute; 기준점=헤더
+  top: 5rem; */
   padding: 1rem;
-  width: 12rem;
+  max-width: 12rem;
+  min-width: 11rem;
+  max-height: 90vh;
+  overflow: scroll;
 }
+
+/* .nav-container {
+  position: sticky;
+  overflow: scroll;
+} */
 
 .spaceBtn {
   display: flex;

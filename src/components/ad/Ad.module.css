@@ -1,0 +1,65 @@
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.card {
+  height: 100%;
+  max-height: 88vh;
+  overflow: scroll;
+  margin: 1rem;
+}
+
+.ad-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.ad-link {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.ad {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #dee0e1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ad:hover {
+  border-color: #636466;
+}
+
+.ad-link:last-child {
+  margin-bottom: 0;
+}
+
+.ad-image {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  margin-bottom: 0.2rem;
+}
+
+.caption {
+  text-align: center;
+  font-size: small;
+  color: #636466;
+  margin-bottom: 0.2rem;
+  /* 왜 여기에 text-decoration: none; 넣을 땐 밑줄이 안 없어지지? */
+}
+
+.caption:hover {
+  text-decoration: underline;
+}
