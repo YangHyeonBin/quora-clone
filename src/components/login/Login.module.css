@@ -1,0 +1,186 @@
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* 이건 모바일이다 모바일 */
+
+.wrapper {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-description {
+  margin: -1rem 3.5rem 1.5rem;
+  text-align: center;
+  color: #666;
+  font-weight: 300;
+}
+
+.policy-description {
+  color: #666;
+  font-weight: 300;
+  font-size: small;
+  margin-bottom: 0.7rem;
+}
+
+.policy-description a {
+  color: #195FAA;
+  text-decoration: none;
+}
+
+.policy-description a:hover {
+  text-decoration: underline;
+}
+
+.main-box {
+  margin: 0 2rem 1rem;
+}
+
+.social-login {
+  background-color: transparent;
+  border: 1px solid #dee0e1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: medium;
+}
+
+.social-login:hover,
+.social-login:focus {
+  background-color: #f4f4f5;
+}
+
+.social-login-text {
+  margin-left: 0.3rem;
+}
+
+.sign-up-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem;
+  color: #636466;
+  font-size: medium;
+  width: 100%;
+}
+
+.sign-up-button:hover,
+.sign-up-button:focus {
+  background-color: #f4f4f5;
+}
+
+.login-header {
+  margin-bottom: 0.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-size: small;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.input-container input {
+  border: 1px solid #dee0e1;
+  border-radius: 4px;
+  padding: 0.4rem 0.5rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+.input-container input:hover,
+.input-container input:active,
+.input-container input:focus {
+  border-color: #195FAA;
+}
+
+/* 로그인, 비번 찾기 */
+.button-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.login-button {
+  background-color: #86a7fb;
+  border: none;
+  border-radius: 20px;
+  font-size: medium;
+  color: white;
+  padding: 0.5rem 2.5rem;
+}
+
+/* 조건부 렌더링 enabled */
+.login-button-enabled {
+  background-color: #2e69ff;
+  cursor: pointer;
+}
+
+.login-button-enabled:hover {
+  background-color: #0b4ffb;
+}
+
+
+.forgot-password {
+  background-color: transparent;
+  border: none;
+  color: #636466;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  font-size: small;
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #636466;
+}
+
+.footer a::after {
+  content: '·';
+  margin: auto 0.3rem;
+}
+
+.link-text:hover,
+.link-text:focus {
+  text-decoration: underline;
+}
+
+.copyright {
+  color: #636466;
+}
