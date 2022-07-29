@@ -125,24 +125,23 @@
 }
 
 .login-button {
-  background-color: #86a7fb;
+  background-color: #2e69ff;
   border: none;
   border-radius: 20px;
   font-size: medium;
   color: white;
   padding: 0.5rem 2.5rem;
-}
-
-/* 조건부 렌더링 enabled */
-.login-button-enabled {
-  background-color: #2e69ff;
   cursor: pointer;
 }
 
-.login-button-enabled:hover {
+.login-button:hover {
   background-color: #0b4ffb;
 }
 
+/* 조건부 렌더링: disabled */
+.login-button:disabled {
+  background-color: #86a7fb;
+}
 
 .forgot-password {
   background-color: transparent;

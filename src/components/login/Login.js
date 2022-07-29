@@ -3,8 +3,92 @@ import { ReactComponent as GoogleLogo } from '../../assets/login/google.svg';
 import { ReactComponent as FacebookLogo } from '../../assets/login/facebook.svg';
 
 import styles from './Login.module.css';
+import { useReducer, useState } from 'react';
+
+// const emailReducer = (state, action) => {
+//   if (action.type === 'USER_INPUT') {
+//     return {
+//       value: action.val,
+//       isValid: action.val.includes('@'),
+//     };
+//   }
+//   if (action.type === 'INPUT_BLUR') {
+//     return {
+//       value: state.value,
+//       isValid: state.value.includes('@'),
+//     };
+//   }
+//   return {
+//     value: '',
+//     isValid: false,
+//   };
+// };
 
 const Login = () => {
+  // const [emailState, dispatchEmail] = useReducer(emailReducer, {
+  //   value: '',
+  //   isValid: null,
+  // });
+
+  // const { isValid: emailIsValid } = emailState; // object destructuring
+
+  // const [password, setPassword] = useState('');
+
+  // const emailChangeHandler = (e) => {
+  //   dispatchEmail({
+  //     type: 'USER_INPUT',
+  //     val: e.target.value,
+  //   });
+  //   console.log(emailState)
+  // };
+
+  // const validateEmailHandler = () => {
+  //   dispatchEmail({
+  //     type: 'INPUT_BLUR',
+  //   });
+  // };
+
+  // const passwordIsValid = (password) => {
+  //   password.trim().length > 0
+  // }
+
+  // const passwordChangeHandler = (e) => {
+  //   setPassword(e.target.value);
+  //   passwordIsValid(e.target.value)
+  // }
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [formIsValid, setFormIsValid] = useState(false);
+
+  const emailChangeHandler = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const passwordChangeHandler = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const formChangeHandler = (e) => {
+    if (
+      email.includes('@') &&
+      password.trim().length > 0
+    ) {
+      setFormIsValid(true)
+    }
+  }
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    console.log(email);
+    console.log(password);
+
+    setEmail('');
+    setPassword('');
+    setFormIsValid(false);
+  }
+
   return (
     <div className={styles.wrapper}>
       <section className={styles['login-page']}>
@@ -48,22 +132,34 @@ const Login = () => {
               </button>
             </section>
           </div>
-          <form className={styles['main-box']}>
+          <form className={styles['main-box']} onChange={formChangeHandler} onSubmit={submitHandler}>
             <header className={styles['login-header']}>Login</header>
             <div className={styles['input-container']}>
               <label htmlFor="email" className={styles['input-label']}>
                 Email
               </label>
-              <input type="text" id="email" placeholder="Your email" />
+              <input
+                type="email"
+                id="email"
+                placeholder="Your email"
+                onChange={emailChangeHandler}
+                value={email}
+              />
             </div>
             <div className={styles['input-container']}>
               <label htmlFor="password" className={styles['input-label']}>
                 Password
               </label>
-              <input type="text" id="password" placeholder="Your password" />
+              <input
+                type="password"
+                id="password"
+                placeholder="Your password"
+                onChange={passwordChangeHandler}
+                value={password}
+              />
             </div>
             <div className={styles['button-container']}>
-              <button disabled className={styles['login-button']}>
+              <button disabled={!formIsValid ? true : false} className={styles['login-button']}>
                 Login
               </button>
               <button className={styles['forgot-password']} type="button">
