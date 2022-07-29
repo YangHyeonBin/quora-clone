@@ -10,7 +10,7 @@
 
 /* 이건 모바일이다 모바일 */
 
-.wrapper {
+.login-page {
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -80,6 +80,7 @@
   color: #636466;
   font-size: medium;
   width: 100%;
+  cursor: pointer;
 }
 
 .sign-up-button:hover,
@@ -147,6 +148,7 @@
   background-color: transparent;
   border: none;
   color: #636466;
+  cursor: pointer;
 }
 
 .forgot-password:hover {
@@ -183,4 +185,51 @@
 
 .copyright {
   color: #636466;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    background: url('https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.home_page_bg_desktop.png-26-4770753d59b970e1.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-page {
+    height: auto;
+    border-radius: 4px;
+    /* width: 50vw; */
+    /* height: 80vh; */
+  }
+
+  .logo-description {
+    margin-bottom: 2.5rem;
+  }
+
+  .main {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  .main-box {
+    flex: 1;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+  }
+
+  .main-box.left {
+    border-right: 1px solid #dee0e1;
+  }
+
+  .login-header {
+    border-bottom: 1px solid #dee0e1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer {
+    margin-bottom: 1.5rem;
+  }
 }
