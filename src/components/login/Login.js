@@ -2,6 +2,9 @@ import { ReactComponent as Logo } from '../../assets/login/logo.svg';
 import { ReactComponent as GoogleLogo } from '../../assets/login/google.svg';
 import { ReactComponent as FacebookLogo } from '../../assets/login/facebook.svg';
 
+// import { auth, provider } from '../../firebase';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 import styles from './Login.module.css';
 import { useReducer, useState } from 'react';
 
@@ -80,6 +83,18 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    const auth = getAuth();
+
+    createUserWithEmailAndPassword(auth, email, password).then(
+      userCredential => {
+        const user = userCredential.user;
+      }
+    ).catch(error => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    })
 
     console.log(email);
     console.log(password);

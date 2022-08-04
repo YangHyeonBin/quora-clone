@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { initializeApp } from "firebase/app";
 
 // configuration
 const firebaseConfig = {
@@ -12,17 +12,19 @@ const firebaseConfig = {
 };
 
 // initialize firebase
-const firebaseApp = firebase.initailizeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
-// 로그인
-const auth = firebase.auth();
+// // 로그인
+// const auth = firebaseApp.auth();
 
-// 구글 로그인
-const provider = new firebase.auth.GoogleAuthProvider();
+// // 구글 로그인
+// const provider = new firebase.auth.GoogleAuthProvider();
 
-// 데이터베이스
-const db = firebaseApp.firestore();
+// // 데이터베이스
+// const db = firebaseApp.firestore();
 
-export { auth, provider };
+// export { auth, provider, db };
 
-export default db;
+// export default db;
+
+export default firebaseApp;
