@@ -5,6 +5,8 @@ import { ReactComponent as FacebookLogo } from '../../assets/login/facebook.svg'
 // import { auth, provider } from '../../firebase';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
+import SignUp from '../sign-up/SignUp';
+
 import styles from './Login.module.css';
 import { useReducer, useState } from 'react';
 
@@ -63,6 +65,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [formIsValid, setFormIsValid] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   const emailChangeHandler = (e) => {
     setEmail(e.target.value);
@@ -104,6 +107,15 @@ const Login = () => {
     setFormIsValid(false);
   }
 
+  const signUpBtnClickHandler = () => {
+    setShowSignUp(true);
+  };
+
+  const closeSignUpBtnHandler = () => {
+    setShowSignUp(false);
+    
+  }
+
   return (
     <div className={styles.wrapper}>
       <section className={styles['login-page']}>
@@ -142,9 +154,10 @@ const Login = () => {
               </button>
             </section>
             <section aria-label="Sign up">
-              <button type="button" className={styles['sign-up-button']}>
+              <button type="button" className={styles['sign-up-button']} onClick={signUpBtnClickHandler}>
                 Sign up with email
               </button>
+              {showSignUp && <SignUp onHideSignUp={closeSignUpBtnHandler} />}
             </section>
           </div>
           <form className={styles['main-box']} onChange={formChangeHandler} onSubmit={submitHandler}>

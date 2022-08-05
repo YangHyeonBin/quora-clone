@@ -141,6 +141,7 @@
 /* 조건부 렌더링: disabled */
 .login-button:disabled {
   background-color: #86a7fb;
+  cursor: default;
 }
 
 .forgot-password {
